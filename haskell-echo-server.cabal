@@ -1,0 +1,36 @@
+cabal-version: 2.2
+
+-- This file has been generated from package.yaml by hpack version 0.35.0.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskell-echo-server
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/haskell-echo-server#readme>
+homepage:       https://github.com/alexs-sh/haskell-echo-server#readme
+bug-reports:    https://github.com/alexs-sh/haskell-echo-server/issues
+author:         Alexander Shirokov
+maintainer:     Alexander Shirokov
+license:        BSD-3-Clause
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/alexs-sh/haskell-echo-server
+
+executable haskell-echo-server-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_haskell_echo_server
+  autogen-modules:
+      Paths_haskell_echo_server
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring >=0.11
+    , network >=3.1
+  default-language: Haskell2010
